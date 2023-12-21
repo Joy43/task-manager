@@ -1,8 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import pic1 from "../../assets/photo/3.jpg";
-import pic2 from "../../assets/photo/2.jpg";
-import pic3 from "../../assets/photo/1.jpg";
+import pic1 from "../../../assets/photo/3.jpg";
+import pic2 from "../../../assets/photo/2.jpg";
+import pic3 from "../../../assets/photo/1.jpg";
 
 const Slider = () => {
   const onChange = (index) => {
@@ -29,15 +29,15 @@ const Slider = () => {
     >
       <div>
         <img src={pic1} alt="Slide 1" />
-        <p className="legend">Legend 1</p>
+        <p className="legend">Task system</p>
       </div>
       <div>
         <img src={pic2} alt="Slide 2" />
-        <p className="legend">Legend 2</p>
+        <p className="legend">task option </p>
       </div>
       <div>
         <img src={pic3} alt="Slide 3" />
-        <p className="legend">Legend 3</p>
+        <p className="legend">task gride</p>
       </div>
     </Carousel>
   );
