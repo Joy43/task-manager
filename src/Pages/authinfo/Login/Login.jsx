@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
+import iconlogin from "../../../assets/photo/3.jpg";
 
-// import { Player, Controls } from "@lottiefiles/react-lottie-player";
-// import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../../Hooks/useAuth";
 
 const Login = () => {
@@ -49,17 +48,7 @@ const Login = () => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          {/* <Player
-            autoplay
-            loop
-            src="https://lottie.host/dc750fb7-d19d-4101-8e8b-2e1cbb2fafff/hBBDsjD7yC.json"
-            style={{ height: "350px", width: "350px" }}
-          >
-            <Controls
-              visible={false}
-              buttons={["play", "repeat", "frame", "debug"]}
-            />
-          </Player> */}
+          <img className=" w-1/2" src={iconlogin} alt="" />
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div className="card-body">

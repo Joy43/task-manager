@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import icon from "../../../assets/icon.png";
+import useAuth from "../../../Hooks/useAuth";
+import GoogleAuth from "../../authinfo/Googlelogin/Googlelogin";
+
 const Navbar = () => {
+  // ------------google login---------
+  const { user, logOut } = useAuth();
+  const handleLogout = () => {
+    logOut().then().catch();
+  };
+
   const navOptions = (
     <>
       <li>
@@ -54,8 +63,21 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-3">
           <a className="btn btn-secondary">Let’s Explore</a>
+          {/* ---------google --------------*/}
+          <div>
+            <div></div>
+
+            {user ? (
+              <button onClick={handleLogout} className="btn">
+                {" "}
+                Sign out{" "}
+              </button>
+            ) : (
+              <GoogleAuth></GoogleAuth>
+            )}
+          </div>
         </div>
       </div>
     </>

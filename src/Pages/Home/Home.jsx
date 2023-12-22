@@ -1,5 +1,6 @@
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import Banner from "./Banner/Banner";
 import Slider from "./Slider/slider";
 import Taskform from "./Taskform/Taskform";
 
@@ -11,6 +12,9 @@ const Home = () => {
       </div>
       <div>
         <Slider></Slider>
+      </div>
+      <div>
+        <Banner></Banner>
       </div>
       <div>
         <Taskform></Taskform>
