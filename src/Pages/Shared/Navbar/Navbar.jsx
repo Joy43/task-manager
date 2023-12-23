@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/dashboad">Dashboad</Link>
+        <Link to="/about">about</Link>
       </li>
       <li>
         <Link to="/login">login</Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
       <div
         className="navbar background-color: #00DBDE  z-10  max-w-screen-xl  text-white"
         style={{
-          background: "linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)",
+          background: "linear-gradient(90deg, #00DBDE 0%, #8A2387 100%)",
         }}
       >
         <div className="navbar-start">
@@ -64,7 +64,22 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
         <div className="navbar-end gap-3">
-          <a className="btn btn-secondary">Let’s Explore</a>
+          <Link to="dashboard/userhome">
+            <button className="btn btn-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-list-task"
+                viewBox="0 0 16 16"
+              >
+                <path d="M6 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0-5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm5 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+              </svg>
+              Let’s Explore
+            </button>
+          </Link>
+
           {/* ---------google --------------*/}
           <div>
             <div></div>

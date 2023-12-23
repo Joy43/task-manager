@@ -4,7 +4,7 @@ const Footer = () => {
     <footer
       className="footer footer-center background-color: #00DBDE p-10  mt-6 text-white "
       style={{
-        background: "linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%)",
+        background: "linear-gradient(90deg, #00DBDE 0%, #8A2387 100%)",
       }}
     >
       <aside>

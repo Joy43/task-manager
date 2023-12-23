@@ -4,6 +4,10 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/authinfo/Login/Login";
 import Signup from "../Pages/authinfo/Signup/Signup";
+import PrivateRoute from "./Privaterouter";
+import Dashboad from "../Pages/Dashboad/Dashboad/Dashboad";
+import Userhome from "../Pages/Dashboad/UserHome/Userhome";
+import Manageproduct from "../Pages/Dashboad/Manageproduct/Manageproduct";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +31,20 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <></>,
-    children: [],
+    element: (
+      <PrivateRoute>
+        <Dashboad></Dashboad>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "userhome",
+        element: <Userhome></Userhome>,
+      },
+      {
+        path: "manageProduct",
+        element: <Manageproduct></Manageproduct>,
+      },
+    ],
   },
 ]);

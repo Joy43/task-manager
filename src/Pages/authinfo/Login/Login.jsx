@@ -10,7 +10,9 @@ const Login = () => {
   const { signIn } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-  console.log("location in the login", location);
+  const from = location.state?.from?.pathname || "/";
+  console.log("state in the location login page", location.state);
+  // console.log("location in the login", location);
   const [showPassword, setShowPassword] = useState(false);
 
   // handle login
@@ -35,7 +37,8 @@ const Login = () => {
         }
         // ------------NAVIGATE-----------------
 
-        navigate(location?.state ? location.state : "/");
+        navigate(from, { replace: true });
+        // navigate(location?.state ? location.state : "/");
       })
 
       .catch((error) => {
